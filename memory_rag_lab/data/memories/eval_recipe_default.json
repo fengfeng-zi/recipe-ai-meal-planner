@@ -1,0 +1,65 @@
+[
+  {
+    "memory_id": "mem_3bfb0114",
+    "memory_text": "Avoid peanuts and peanut sauces.",
+    "source": "profile",
+    "created_at": "2026-04-25T16:06:28.005123+00:00",
+    "memory_type": "allergy",
+    "tags": [
+      "peanut"
+    ],
+    "structured": {},
+    "project_track": "recipe_query_loop"
+  },
+  {
+    "memory_id": "mem_3bf53da2",
+    "memory_text": "Need high-protein lunches for muscle gain.",
+    "source": "profile",
+    "created_at": "2026-04-25T16:06:28.006441+00:00",
+    "memory_type": "goal",
+    "tags": [
+      "high-protein",
+      "lunch",
+      "muscle"
+    ],
+    "structured": {},
+    "project_track": "recipe_query_loop"
+  },
+  {
+    "memory_id": "mem_2b705a6d",
+    "memory_text": "Prefer quick weekday dinners with vegetables.",
+    "source": "profile",
+    "created_at": "2026-04-25T16:06:28.007684+00:00",
+    "memory_type": "preference",
+    "tags": [
+      "quick",
+      "dinner",
+      "vegetable"
+    ],
+    "structured": {},
+    "project_track": "recipe_query_loop"
+  },
+  {
+    "memory_id": "mem_08afe396",
+    "memory_text": "Logged breakfast: banana oatmeal. Calories: 320. Ingredients: oats, banana. Notes: Hungry again in 2 hours.",
+    "source": "meal_log",
+    "created_at": "2026-04-25T16:06:28.009031+00:00",
+    "memory_type": "meal_log",
+    "tags": [
+      "breakfast",
+      "oats",
+      "banana"
+    ],
+    "structured": {
+      "meal_name": "banana oatmeal",
+      "meal_type": "breakfast",
+      "calories": 320,
+      "ingredients": [
+        "oats",
+        "banana"
+      ],
+      "notes": "Hungry again in 2 hours"
+    },
+    "project_track": "recipe_query_loop"
+  }
+]

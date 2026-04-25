@@ -1,0 +1,15 @@
+﻿[project]
+name = "memory-rag-lab"
+version = "0.1.0"
+description = "Memory-aware RAG lab with chunking, retrieval, reranking, grounded answers, and evals."
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

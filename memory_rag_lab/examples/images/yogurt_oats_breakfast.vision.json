@@ -1,0 +1,20 @@
+{
+  "dish_name": "Greek Yogurt Berry Oats",
+  "meal_type": "breakfast",
+  "visible_ingredients": [
+    "yogurt",
+    "oats",
+    "berries"
+  ],
+  "cuisine_tags": [
+    "breakfast",
+    "quick"
+  ],
+  "nutrition_signals": [
+    "protein",
+    "high-fiber"
+  ],
+  "caution_tags": [],
+  "summary": "The image looks like a yogurt-oats breakfast bowl with berries.",
+  "confidence": 0.94
+}

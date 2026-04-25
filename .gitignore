@@ -1,0 +1,52 @@
+﻿# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*
+*.local
+
+# Logs
+*.log
+
+# Runtime-generated web uploads
+/recipe_studio_web/uploads/*
+!/recipe_studio_web/uploads/.gitkeep
+
+# Runtime-generated agent artifacts
+/agent_runtime_harness/data/runs/*
+!/agent_runtime_harness/data/runs/.gitkeep
+/agent_runtime_harness/data/checkpoints/*
+!/agent_runtime_harness/data/checkpoints/.gitkeep
+
+# Local memory/session state noisier than the eval fixtures
+/memory_rag_lab/data/memories/demo.json
+/memory_rag_lab/data/memories/smoke.json
+/memory_rag_lab/data/memories/visiondemo.json

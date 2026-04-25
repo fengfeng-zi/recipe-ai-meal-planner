@@ -1,0 +1,10 @@
+﻿{
+  "dish_name": "Chicken Rice Bowl",
+  "meal_type": "dinner",
+  "visible_ingredients": ["chicken", "rice", "broccoli"],
+  "cuisine_tags": ["quick-cook", "meal-prep"],
+  "nutrition_signals": ["high-protein"],
+  "caution_tags": ["soy"],
+  "summary": "Sidecar says this is a chicken rice bowl suitable for dinner prep.",
+  "confidence": 0.92
+}

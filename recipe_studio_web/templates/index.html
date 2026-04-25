@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>&#x83dc;&#x8c31;&#x8bc6;&#x522b;&#x4e0e;&#x81b3;&#x98df;&#x89c4;&#x5212;</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="hero">
+    <p class="kicker">&#x83dc;&#x8c31;&#x8bc6;&#x522b;&#x4e0e;&#x81b3;&#x98df;&#x89c4;&#x5212;&#x5de5;&#x4f5c;&#x53f0;</p>
+    <h1>&#x83dc;&#x8c31;&#x5de5;&#x4f5c;&#x53f0;</h1>
+    <p class="lede">&#x4e0a;&#x4f20;&#x83dc;&#x54c1;&#x56fe;&#x7247;&#xff0c;&#x8bc6;&#x522b;&#x83dc;&#x54c1;&#x4e0e;&#x505a;&#x6cd5;&#x7ebf;&#x7d22;&#xff0c;&#x67e5;&#x770b;&#x68c0;&#x7d22;&#x8bc1;&#x636e;&#xff0c;&#x5e76;&#x751f;&#x6210;&#x6309;&#x5929;&#x5c55;&#x793a;&#x7684;&#x81b3;&#x98df;&#x8ba1;&#x5212;&#x3002;</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls span-2">
+      <div class="panel-head">
+        <div>
+          <h2>&#x8f93;&#x5165;&#x533a;</h2>
+          <p class="subtle">&#x4f18;&#x5148;&#x4f7f;&#x7528;&#x672c;&#x5730;&#x56fe;&#x7247;&#x4e0a;&#x4f20;&#xff1b;&#x5982;&#x679c;&#x4f60;&#x5df2;&#x7ecf;&#x6709;&#x670d;&#x52a1;&#x7aef;&#x56fe;&#x7247;&#x8def;&#x5f84;&#xff0c;&#x4e5f;&#x53ef;&#x4ee5;&#x624b;&#x52a8;&#x586b;&#x5199;&#x8def;&#x5f84;&#x4f5c;&#x4e3a;&#x515c;&#x5e95;&#x65b9;&#x5f0f;&#x3002;</p>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">&#x51c6;&#x5907;&#x5c31;&#x7eea;&#x3002;</p>
+      </div>
+
+      <div class="field-grid compact-grid">
+        <label>&#x4f1a;&#x8bdd;&#x7f16;&#x53f7;
+          <input id="sessionId" type="text" value="demo">
+        </label>
+        <label>&#x76ee;&#x6807;
+          <input id="goal" type="text" value="&#x51cf;&#x8102;">
+        </label>
+        <label>&#x89c4;&#x5212;&#x5929;&#x6570;
+          <input id="planningDays" type="number" min="1" max="14" value="5">
+        </label>
+        <label>&#x56fe;&#x7247;&#x8def;&#x5f84;&#x515c;&#x5e95;
+          <input id="imagePath" type="text" placeholder="valid_meal_like.png">
+        </label>
+      </div>
+
+      <div class="upload-shell upload-preview-shell">
+        <label class="upload-zone" for="imageFile">
+          <span class="upload-kicker">&#x56fe;&#x7247;&#x4e0a;&#x4f20;</span>
+          <strong>&#x9009;&#x62e9;&#x4e00;&#x5f20;&#x83dc;&#x54c1;&#x56fe;&#x7247;</strong>
+          <span>&#x652f;&#x6301; PNG&#x3001;JPG&#x3001;WEBP&#x3002;&#x9009;&#x4e2d;&#x540e;&#x4f1a;&#x5148;&#x663e;&#x793a;&#x672c;&#x5730;&#x9884;&#x89c8;&#xff0c;&#x518d;&#x4e0a;&#x4f20;&#x5230;&#x670d;&#x52a1;&#x7aef;&#x8fdb;&#x884c;&#x8bc6;&#x522b;&#x3002;</span>
+          <input id="imageFile" type="file" accept="image/png,image/jpeg,image/jpg,image/webp">
+        </label>
+        <div class="upload-meta upload-preview">
+          <p id="uploadState" class="summary" role="status" aria-live="polite">&#x5c1a;&#x672a;&#x9009;&#x62e9;&#x56fe;&#x7247;&#x3002;</p>
+          <div id="imagePreviewCard" class="preview-card" hidden>
+            <div class="preview-frame">
+              <img id="imagePreview" class="preview-image" alt="&#x5df2;&#x9009;&#x62e9;&#x7684;&#x83dc;&#x54c1;&#x56fe;&#x7247;&#x9884;&#x89c8;">
+            </div>
+            <p id="imagePreviewCaption" class="subtle">&#x8fd9;&#x91cc;&#x4f1a;&#x663e;&#x793a;&#x4f60;&#x521a;&#x521a;&#x9009;&#x62e9;&#x7684;&#x672c;&#x5730;&#x56fe;&#x7247;&#x3002;</p>
+          </div>
+          <div class="progress-shell" aria-live="polite">
+            <div class="upload-progress-head">
+              <span class="progress-head">&#x4e0a;&#x4f20;&#x8fdb;&#x5ea6;</span>
+              <span id="uploadProgressText" class="upload-progress-text">&#x7b49;&#x5f85;&#x4e0a;&#x4f20;</span>
+            </div>
+            <progress id="uploadProgressBar" class="upload-progress" max="100" value="0" hidden></progress>
+          </div>
+          <p class="subtle">&#x5982;&#x679c;&#x4f60;&#x624b;&#x52a8;&#x8f93;&#x5165;&#x56fe;&#x7247;&#x8def;&#x5f84;&#xff0c;&#x5219;&#x4f18;&#x5148;&#x4f7f;&#x7528;&#x8be5;&#x8def;&#x5f84;&#xff1b;&#x5426;&#x5219;&#x7cfb;&#x7edf;&#x4f1a;&#x81ea;&#x52a8;&#x4e0a;&#x4f20;&#x4f60;&#x521a;&#x9009;&#x4e2d;&#x7684;&#x56fe;&#x7247;&#xff0c;&#x5e76;&#x590d;&#x7528;&#x5230;&#x8bc6;&#x522b;&#x3001;&#x68c0;&#x7d22;&#x4e0e;&#x89c4;&#x5212;&#x6d41;&#x7a0b;&#x3002;</p>
+        </div>
+      </div>
+
+      <label>&#x9700;&#x6c42;&#x63cf;&#x8ff0;
+        <textarea id="query" rows="3">&#x6211;&#x9700;&#x8981;&#x4e00;&#x4efd;&#x9ad8;&#x86cb;&#x767d;&#x3001;&#x5e26;&#x8516;&#x83dc;&#x3001;&#x5e76;&#x4e14;&#x4e0d;&#x542b;&#x82b1;&#x751f;&#x7684;&#x5feb;&#x6377;&#x665a;&#x9910;&#x5efa;&#x8bae;&#x3002;</textarea>
+      </label>
+
+      <div class="field-grid compact-grid">
+        <label>&#x8fc7;&#x654f;&#x539f;&#xff08;&#x9017;&#x53f7;&#x5206;&#x9694;&#xff09;
+          <input id="allergies" type="text" value="&#x82b1;&#x751f;">
+        </label>
+        <label>&#x4e0d;&#x559c;&#x6b22;&#x5403;&#xff08;&#x9017;&#x53f7;&#x5206;&#x9694;&#xff09;
+          <input id="dislikes" type="text" value="&#x7f8a;&#x8089;">
+        </label>
+        <label>&#x504f;&#x597d;&#xff08;&#x9017;&#x53f7;&#x5206;&#x9694;&#xff09;
+          <input id="preferences" type="text" value="&#x9ad8;&#x86cb;&#x767d;,&#x5feb;&#x624b;">
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="analyzeBtn" class="btn btn-secondary">&#x8bc6;&#x522b;&#x56fe;&#x7247;</button>
+        <button id="queryBtn" class="btn btn-secondary">&#x67e5;&#x770b;&#x68c0;&#x7d22;&#x8bc1;&#x636e;</button>
+        <button id="planBtn" class="btn btn-primary">&#x751f;&#x6210;&#x81b3;&#x98df;&#x8ba1;&#x5212;</button>
+        <button id="allBtn" class="btn btn-ghost">&#x4e00;&#x952e;&#x5b8c;&#x6574;&#x8fd0;&#x884c;</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>&#x56fe;&#x50cf;&#x8bc6;&#x522b;&#x7ed3;&#x679c;</h2>
+      <div id="analysisSummary" class="summary">&#x4e0a;&#x4f20;&#x56fe;&#x7247;&#x540e;&#xff0c;&#x8fd9;&#x91cc;&#x4f1a;&#x663e;&#x793a;&#x83dc;&#x54c1;&#x8bc6;&#x522b;&#x7ed3;&#x679c;&#x3002;</div>
+      <pre id="analysisJson" class="json-block"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>&#x68c0;&#x7d22;&#x8bc1;&#x636e;</h2>
+      <div id="retrievalSummary" class="summary">&#x5c1a;&#x672a;&#x8fdb;&#x884c;&#x68c0;&#x7d22;&#x3002;</div>
+      <div id="evidenceCards" class="evidence-grid" aria-live="polite">
+        <div class="empty-card">&#x70b9;&#x51fb;&#x201c;&#x67e5;&#x770b;&#x68c0;&#x7d22;&#x8bc1;&#x636e;&#x201d;&#x540e;&#xff0c;&#x8fd9;&#x91cc;&#x4f1a;&#x5c55;&#x793a;&#x5019;&#x9009;&#x83dc;&#x8c31;&#x53ca;&#x5176;&#x5339;&#x914d;&#x4f9d;&#x636e;&#x3002;</div>
+      </div>
+      <details class="raw-toggle">
+        <summary>&#x67e5;&#x770b;&#x539f;&#x59cb;&#x68c0;&#x7d22;&#x6570;&#x636e;</summary>
+        <pre id="retrievalJson" class="json-block"></pre>
+      </details>
+    </section>
+
+    <section class="panel span-2">
+      <h2>&#x57fa;&#x4e8e;&#x8bc1;&#x636e;&#x7684;&#x5efa;&#x8bae;</h2>
+      <pre id="answerText" class="text-block"></pre>
+    </section>
+
+    <section class="panel span-2 plan-days">
+      <h2>&#x81b3;&#x98df;&#x8ba1;&#x5212;</h2>
+      <div id="planSummary" class="summary">&#x5c1a;&#x672a;&#x751f;&#x6210;&#x81b3;&#x98df;&#x8ba1;&#x5212;&#x3002;</div>
+      <div id="planCards" class="plan-grid plan-days-grid" aria-live="polite">
+        <article class="plan-day-card empty-card">
+          <h3>&#x8fd8;&#x6ca1;&#x6709;&#x6bcf;&#x65e5;&#x8ba1;&#x5212;&#x5361;&#x7247;</h3>
+          <p>&#x70b9;&#x51fb;&#x201c;&#x751f;&#x6210;&#x81b3;&#x98df;&#x8ba1;&#x5212;&#x201d;&#x540e;&#xff0c;&#x8fd9;&#x91cc;&#x4f1a;&#x6309;&#x5929;&#x663e;&#x793a;&#x65e9;&#x9910;&#x3001;&#x5348;&#x9910;&#x3001;&#x665a;&#x9910;&#x4e0e;&#x52a0;&#x9910;&#x5efa;&#x8bae;&#x3002;</p>
+        </article>
+      </div>
+      <pre id="planText" class="text-block"></pre>
+      <details class="raw-toggle">
+        <summary>&#x67e5;&#x770b;&#x539f;&#x59cb;&#x8ba1;&#x5212;&#x6570;&#x636e;</summary>
+        <pre id="planJson" class="json-block"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+

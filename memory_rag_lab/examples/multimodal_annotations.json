@@ -1,0 +1,40 @@
+{
+  "title": "Recipe Plate Annotation Samples",
+  "text": "Multimodal annotation records linked to recipe cards for retrieval grounding demos.",
+  "schema_version": "v1",
+  "annotations": [
+    {
+      "sample_id": "img_001",
+      "image_file": "plates/salmon_green_plate.jpg",
+      "linked_recipe": "Seared Salmon Green Plate",
+      "meal_type": "dinner",
+      "detected_items": ["salmon", "asparagus", "potatoes", "lemon"],
+      "allergen_flags": ["fish"],
+      "diet_tags": ["high-protein", "quick-cook"],
+      "caption": "Seared salmon with asparagus and potatoes on one plate.",
+      "confidence": 0.93
+    },
+    {
+      "sample_id": "img_002",
+      "image_file": "plates/egg_white_wrap.jpg",
+      "linked_recipe": "Egg White Spinach Wrap",
+      "meal_type": "breakfast",
+      "detected_items": ["egg white wrap", "spinach", "tomato"],
+      "allergen_flags": ["dairy"],
+      "diet_tags": ["high-protein", "portable"],
+      "caption": "Cut wrap with visible egg white, spinach and tomato layers.",
+      "confidence": 0.91
+    },
+    {
+      "sample_id": "img_003",
+      "image_file": "plates/chicken_stirfry_bowl.jpg",
+      "linked_recipe": "Chicken Stir-Fry Rice Bowl",
+      "meal_type": "dinner",
+      "detected_items": ["chicken", "rice", "broccoli", "mushroom"],
+      "allergen_flags": ["soy"],
+      "diet_tags": ["high-protein", "meal-plan-template"],
+      "caption": "Rice bowl topped with chicken strips and broccoli.",
+      "confidence": 0.9
+    }
+  ]
+}

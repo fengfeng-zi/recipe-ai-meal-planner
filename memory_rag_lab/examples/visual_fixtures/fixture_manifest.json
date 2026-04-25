@@ -1,0 +1,14 @@
+﻿{
+  "fixtures": [
+    {
+      "image": "salmon_plate_demo.jpg",
+      "expected_provider": "sidecar",
+      "expected_tags": ["salmon", "broccoli", "dinner"]
+    },
+    {
+      "image": "peanut_tofu_lunch_demo.jpg",
+      "expected_provider": "filename-fallback",
+      "expected_tags": ["peanut", "tofu", "lunch"]
+    }
+  ]
+}

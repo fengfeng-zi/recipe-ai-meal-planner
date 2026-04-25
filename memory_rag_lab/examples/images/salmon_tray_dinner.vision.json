@@ -1,0 +1,21 @@
+{
+  "dish_name": "Garlic Salmon Veggie Tray",
+  "meal_type": "dinner",
+  "visible_ingredients": [
+    "salmon",
+    "asparagus",
+    "potatoes",
+    "lemon"
+  ],
+  "cuisine_tags": [
+    "tray-bake",
+    "high-protein"
+  ],
+  "nutrition_signals": [
+    "protein",
+    "vegetable-forward"
+  ],
+  "caution_tags": [],
+  "summary": "The image shows a salmon tray dinner with vegetables and lemon.",
+  "confidence": 0.96
+}

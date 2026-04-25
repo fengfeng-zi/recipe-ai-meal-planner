@@ -1,0 +1,10 @@
+﻿{
+  "dish_name": "Salmon Broccoli Plate",
+  "meal_type": "dinner",
+  "visible_ingredients": ["salmon", "broccoli", "lemon"],
+  "cuisine_tags": ["sheet-pan", "high-protein"],
+  "nutrition_signals": ["protein-forward"],
+  "caution_tags": ["fish"],
+  "summary": "Sidecar says this is a salmon dinner plate with broccoli.",
+  "confidence": 0.94
+}
